@@ -1,0 +1,8 @@
+--- /rom/etc/profile	2018-10-22 07:28:39.000000000 +0100
++++ /etc/profile	2020-06-06 22:26:36.000000000 +0100
+@@ -1,5 +1,4 @@
+ #!/bin/sh
+-[ -f /etc/banner ] && cat /etc/banner
+ 
+ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/ipq-resource/bin
+ export HOME=$(grep -e "^${USER:-root}:" /etc/passwd | cut -d ":" -f 6)
