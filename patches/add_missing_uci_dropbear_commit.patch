@@ -1,0 +1,9 @@
+--- /rom/etc/hotplug.d/button/buttons	2018-10-22 07:28:39.000000000 +0100
++++ /etc/hotplug.d/button/buttons	2020-05-25 12:36:14.000000000 +0100
+@@ -4,5 +4,6 @@
+ if [ "$BUTTON" = "wps" -a "$ACTION" = "released" -a "$SEEN" -ge 15 ];then
+   logger enable dropbear the time is $SEEN
+   uci set dropbear.@dropbear[0].enable='1'
++  uci commit dropbear
+   /etc/init.d/dropbear start
+ fi
