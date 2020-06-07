@@ -1,0 +1,11 @@
+--- /rom/etc/init.d/dropbear	2018-10-22 07:54:50.000000000 +0100
++++ /etc/init.d/dropbear	2020-06-07 08:26:16.000000000 +0100
+@@ -53,7 +53,7 @@
+ 	local PasswordAuth enable Interface GatewayPorts \
+ 		RootPasswordAuth RootLogin rsakeyfile \
+ 		dsskeyfile BannerFile Port
+-     echo 1111111111111 
++		
+ 	validate_section_dropbear "${1}" || {
+ 		echo "validation failed"
+ 		return 1
